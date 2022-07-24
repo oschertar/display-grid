@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'HovesBold';
+    src: url('TypeType\ -\ TT\ Hoves\ Bold.ttf');
+}
+
+@font-face {
+    font-family: 'HovesMedium';
+    src: url('TypeType\ -\ TT\ Hoves\ Medium.ttf');
+}
+
+@font-face {
+    font-family: 'HovesRegular';
+    src: url('TypeType\ -\ TT\ Hoves\ Regular.ttf');
+}
+
+body {
+    background-color: #121212;
+    font-family: "HovesRegular";
+    color: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+body nav {
+    padding: 16px;
+    border-bottom: 1px solid #dadada;
+}
+
+body nav img {
+    height: 50px;
+    margin: 0 auto;
+    display: block;
+}
+
+main {
+    padding: 32px;
+}
+
+main .container-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+main .card {
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main .card-1 {
+    background-image: url('./../img/card1.jpg');
+}
+
+main .card-2 {
+    background-image: url('./../img/card2.jpg');
+}
+
+main .card-3 {
+    background-image: url('./../img/card3.jpg');
+}
+
+main .card-4 {
+    background-image: url('./../img/card4.jpg');
+}
+
+main .card-5 {
+    background-image: url('./../img/card5.jpg');
+}
+
+main .card-6 {
+    background-image: url('./../img/card6.jpg');
+}
+
+main .card-7 {
+    background-image: url('./../img/card7.jpg');
+}
+
+main .card-8 {
+    background-image: url('./../img/card8.jpg');
+}
+
+pre code {
+    background-color: #292929;
+    border: 1px solid #999;
+    display: block;
+    padding: 20px;
+    max-width: 400px;
+}
