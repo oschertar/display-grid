@@ -12,14 +12,15 @@
 <body>
     <nav>
         <img src="/img/Logo_White_Alineado.png" alt="logo" />
-
+        <h1>CSS Grid</h1>
     </nav>
     <main>
-        <h1>CSS Grid</h1>
-        <h4>Grid básico</h4>
-        <pre>
+
+        <section>
+            <h4>Grid básico</h4>
+            <pre>
             <code>
-    .container-grid { 
+    .container-grid-simple { 
         display: grid; 
         grid-template-columns: repeat(4, 1fr); 
         gap: 16px; 
@@ -28,16 +29,248 @@
         </pre>
 
 
-        <div class="container-grid">
-            <div class="card card-1"></div>
-            <div class="card card-2"></div>
-            <div class="card card-3"></div>
-            <div class="card card-4"></div>
-            <div class="card card-5"></div>
-            <div class="card card-6"></div>
-            <div class="card card-7"></div>
-            <div class="card card-8"></div>
-        </div>
+            <div class="grid container-grid-simple">
+                <div class="card card-1"></div>
+                <div class="card card-2"></div>
+                <div class="card card-3"></div>
+                <div class="card card-4"></div>
+                <div class="card card-5"></div>
+                <div class="card card-6"></div>
+                <div class="card card-7"></div>
+                <div class="card card-8"></div>
+            </div>
+        </section>
+        <section>
+            <h4>Grid básico column-start</h4>
+            <pre>
+            <code>
+    .container-grid-simple-start { 
+        display: grid; 
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 16px; 
+    }
+
+    .container-grid-simple-start .card-1 {
+        grid-column-start: 2;
+    }
+            </code>
+        </pre>
+
+
+            <div class="grid container-grid-simple-start">
+                <div class="card card-1"></div>
+                <div class="card card-2"></div>
+                <div class="card card-3"></div>
+                <div class="card card-4"></div>
+                <div class="card card-5"></div>
+                <div class="card card-6"></div>
+                <div class="card card-7"></div>
+                <div class="card card-8"></div>
+            </div>
+        </section>
+        <section>
+            <h4>Grid básico inline</h4>
+            <pre>
+            <code>
+    .container-grid-inline { 
+        display: inline-grid; 
+        grid-template-columns: repeat(4, 1fr); 
+        row-gap: 16px;
+    }
+            </code>
+        </pre>
+
+
+            <div class="grid container-grid-inline">
+                <div class="card card-1"></div>
+                <div class="card card-2"></div>
+                <div class="card card-3"></div>
+                <div class="card card-4"></div>
+                <div class="card card-5"></div>
+                <div class="card card-6"></div>
+                <div class="card card-7"></div>
+                <div class="card card-8"></div>
+            </div>
+        </section>
+        <section>
+            <h4>Grid básico con filas</h4>
+            <pre>
+            <code>
+    .container-grid-simple-row { 
+        display: grid; 
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 2fr 1fr;
+        column-gap: 16px; 
+    }
+            </code>
+        </pre>
+
+
+            <div class="grid container-grid-simple-row">
+                <div class="card card-1"></div>
+                <div class="card card-2"></div>
+                <div class="card card-3"></div>
+                <div class="card card-4"></div>
+                <div class="card card-5"></div>
+                <div class="card card-6"></div>
+                <div class="card card-7"></div>
+                <div class="card card-8"></div>
+            </div>
+        </section>
+
+
+        <section>
+            <h4>Grid con plantillas</h4>
+            <pre>
+            <code>
+    .container-grid-templates { 
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        "a a b c" 
+        "d . . f" 
+        "g h h h"
+        "e e e e";
+    }
+
+    .container-grid-templates .card-1 {
+        grid-area: a;
+    }
+            </code>
+        </pre>
+
+
+            <div class="grid container-grid-templates">
+                <div class="card card-1"></div>
+                <div class="card card-2"></div>
+                <div class="card card-3"></div>
+                <div class="card card-4"></div>
+                <div class="card card-5"></div>
+                <div class="card card-6"></div>
+                <div class="card card-7"></div>
+                <div class="card card-8"></div>
+            </div>
+        </section>
+
+
+        <section>
+            <h4>Grid responsive autofill</h4>
+            <pre>
+            <code>
+    .container-grid-responsive-autofill { 
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+        gap: 16px;
+    }
+
+    
+            </code>
+        </pre>
+
+
+            <div class="grid container-grid-responsive-autofill">
+                <div class="card card-1"></div>
+                <div class="card card-2"></div>
+                <div class="card card-3"></div>
+                <div class="card card-4"></div>
+                <div class="card card-5"></div>
+                <div class="card card-6"></div>
+                <div class="card card-7"></div>
+                <div class="card card-8"></div>
+            </div>
+        </section>
+
+
+        <section>
+            <h4>Grid responsive autofit</h4>
+            <pre>
+            <code>
+    .container-grid-responsive-autofit { 
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        gap: 16px;
+    }
+
+    
+            </code>
+        </pre>
+
+
+            <div class="grid container-grid-responsive-autofit">
+                <div class="card card-1"></div>
+                <div class="card card-2"></div>
+            </div>
+        </section>
+
+
+        <section>
+            <h4>Grid responsive autoflow</h4>
+            <pre>
+            <code>
+    .container-grid-autoflow { 
+        display: grid;
+        grid-auto-flow: dense;
+        grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+        gap: 16px;
+    }
+
+    
+            </code>
+        </pre>
+
+
+            <div class="grid container-grid-autoflow">
+                <div class="card card-1"></div>
+                <div class="card card-2"></div>
+                <div class="card card-3"></div>
+                <div class="card card-4"></div>
+                <div class="card card-5"></div>
+                <div class="card card-6"></div>
+                <div class="card card-7"></div>
+                <div class="card card-8"></div>
+            </div>
+        </section>
+
+
+
+
+        <section>
+            <h4>Grid responsive sin overflow</h4>
+            <pre>
+            <code>
+    .container-grid-not-overflow { 
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(30rem,100%), 1fr));
+        gap: 16px;
+    }
+
+    
+            </code>
+        </pre>
+
+
+            <div class="grid container-grid-not-overflow">
+                <div class="card card-1"></div>
+                <div class="card card-2"></div>
+                <div class="card card-3"></div>
+                <div class="card card-4"></div>
+                <div class="card card-5"></div>
+                <div class="card card-6"></div>
+                <div class="card card-7"></div>
+                <div class="card card-8"></div>
+            </div>
+        </section>
+
+
+
+
+        <section>
+            <h4>Recursos</h4>
+            <a href="https://grid.layoutit.com">Grid interactivo</a>
+            <a href="https://learncssgrid.com">Aprender Grid</a>
+        </section>
+
+
     </main>
 
 
